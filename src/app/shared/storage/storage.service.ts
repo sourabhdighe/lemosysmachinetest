@@ -16,7 +16,6 @@ export class StorageService {
   }]
 
 
-
   constructor() { }
 
   localstorage: any = localStorage.getItem('globalrecord');
