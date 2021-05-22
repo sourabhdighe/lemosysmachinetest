@@ -1,0 +1,142 @@
+<div>
+  <div>
+    <h2 class="titlestyle" mat-dialog-title>{{this.isUpdate ? 'Update' : 'Add'}} User</h2>
+  </div>
+  <div>
+    <a (click)="dialoge.closeAll()" class="cancledialoge">
+      <mat-icon aria-hidden="false" aria-label="cross" color="dark">close</mat-icon>
+    </a>
+  </div>
+</div>
+<pre>
+
+  </pre>
+<mat-dialog-content class="mat-typography">
+  <div class="createstyle">
+    <form [formGroup]="userForm" class="add-emp-form">
+
+      <div [fxLayout]="'row'" fxLayoutGap="20px" class="add-emp-form-field">
+        <div fxFlex="45">
+          <div style="padding-bottom: 10px">
+            <div class="add-emp-label">
+              <mat-label>Name</mat-label>
+            </div>
+            <mat-form-field floatLabel="never" class="add-emp-field">
+
+              <input matInput formControlName="name" value="">
+              <mat-error *ngIf="userForm.get('name')?.hasError('required')" class="errorcolor">
+                This field is mandatory
+              </mat-error>
+              <mat-error *ngIf="userForm.get('name')?.hasError('pattern')" class="errorcolor">
+                Invalid Value
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex="45">
+          <div style="padding-bottom: 10px">
+            <div class="add-emp-label">
+              <mat-label>Mobile number</mat-label>
+            </div>
+            <mat-form-field floatLabel="never" class="add-emp-field">
+
+              <input matInput formControlName="mobileno" value="">
+              <mat-error *ngIf="userForm.get('mobileno')?.hasError('required')" class="errorcolor">
+                This field is mandatory
+              </mat-error>
+              <mat-error *ngIf="userForm.get('mobileno')?.hasError('pattern')" class="errorcolor">
+                Invalid value
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+      <div [fxLayout]="'row'" fxLayoutGap="20px" class="add-emp-form-field">
+        <div fxFlex="45">
+          <div style="padding-bottom: 10px">
+            <div class="add-emp-label">
+              <mat-label>Email</mat-label>
+            </div>
+            <mat-form-field floatLabel="never" class="add-emp-field">
+
+              <input matInput formControlName="email" value="">
+              <mat-error *ngIf="userForm.get('email')?.hasError('required')" class="errorcolor">
+                This field is mandatory
+              </mat-error>
+              <mat-error *ngIf="userForm.get('email')?.hasError('pattern')" class="errorcolor">
+                Invalid Value
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex="45">
+          <div style="padding-bottom: 10px">
+            <div class="add-emp-label">
+              <mat-label>Password</mat-label>
+            </div>
+            <mat-form-field floatLabel="never" class="add-emp-field">
+
+              <input matInput formControlName="password" value="" type="password">
+              <mat-error *ngIf="userForm.get('password')?.hasError('required')" class="errorcolor">
+                This field is mandatory
+              </mat-error>
+              <mat-error *ngIf="userForm.get('password')?.hasError('pattern')" class="errorcolor">
+                Invalid password
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+      <div [fxLayout]="'row'" fxLayoutGap="20px" class="add-emp-form-field">
+        <div fxFlex="45">
+          <div style="padding-bottom: 10px">
+            <div class="add-emp-label">
+              <mat-label>Designation</mat-label>
+            </div>
+            <mat-form-field floatLabel="never" class="add-emp-field">
+              <mat-select formControlName="designation" placeholder="Designation" required>
+                <mat-option *ngFor="let desig of designation" [value]="desig">
+                  {{desig}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="userForm.get('designation')?.hasError('required')" class="errorcolor">
+                This field is mandatory
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex="45">
+          <div style="padding-bottom: 10px">
+            <div class="add-emp-label">
+              <mat-label>Gender</mat-label>
+            </div>
+            <mat-form-field floatLabel="never" class="add-emp-field">
+              <mat-select formControlName="gender" placeholder="Gender" required>
+                <mat-option *ngFor="let gen of gender" [value]="gen">
+                  {{gen}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="userForm.get('gender')?.hasError('required')" class="errorcolor">
+                This field is mandatory
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</mat-dialog-content>
+
+<div class="add-emp-actions">
+  <mat-dialog-actions style="display: inline-block; float: left;">
+    <button mat-raised-button mat-button class="{{userForm.valid ? 'btn-white':'emp-list-btn'}}"
+      (click)="dialoge.closeAll()" [disabled]="userForm.valid">Cancel</button>
+  </mat-dialog-actions>
+  <mat-dialog-actions style="display: inline-block; float: right;">
+    <button mat-raised-button mat-button class="{{userForm.valid ? 'emp-list-btn':'btn-white'}}" (click)="cuFunction()"
+      [disabled]="!userForm.valid">{{isUpdate ? 'Update':'Create'}}</button>
+  </mat-dialog-actions>
+</div>

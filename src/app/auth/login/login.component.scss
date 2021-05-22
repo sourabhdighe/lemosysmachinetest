@@ -1,0 +1,144 @@
+.add-emp-form {
+  font-family: var(--unnamed-font-family-poppins);
+  font-size: 12px;
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .add-emp-form-field {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+  .add-emp-label {
+    padding-bottom: 10px;
+  }
+
+  ::ng-deep {
+    .mat-form-field-underline {
+      display: none !important;
+    }
+
+    .mat-dialog-content {
+      max-width: none !important;
+    }
+
+    .mat-form-field-flex {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #dce4e8;
+      border-radius: 10px;
+      opacity: 1;
+      font-size: 12px;
+      text-align: left;
+    }
+    .add-emp-field {
+      width:100% !important
+    }
+    .add-emp-field {
+      .mat-form-field-infix {
+        padding-left: 8px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+.emp-list-btn {
+  background: var(--unnamed-color-1cc975);
+  color: #ffffff;
+  border-radius: 10px;
+  opacity: 1;
+  font-size: 10px;
+}
+
+/**/
+.centerdiv {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  margin: auto;
+  top: 15em;
+}
+
+.hideshowlogin {
+  font-size: 0.9em;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.mat-card-footer {
+  margin: 35px -16px -75px -16px !important;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+mat-card {
+  vertical-align: middle;
+}
+
+.logindivCenter button {
+  width: 100%;
+  border-radius: 10px;
+  opacity: 1;
+  height: 2.8em;
+  top: 1em;
+}
+
+.loginInactive {
+  color: white !important;
+  padding: 0.5em;
+  line-height: 1em;
+}
+
+.loginActive {
+  background-color: rgb(30, 83, 196);
+  color: white !important;
+  padding: 0.5em;
+  line-height: 1em;
+}
+
+mat-card {
+  position: relative;
+  top: 8em;
+}
+mat-card-content {
+  position: relative;
+  top: 0 !important;
+  left: auto;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  opacity: 1;
+  padding: 1.8em;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button .mat-icon {
+  font-size: 2em !important;
+}
+
+.forgetpassword {
+  height: 15px;
+  opacity: 1;
+  right: 0em !important;
+  position: relative;
+  text-align: right;
+  font-size: 0.8em;
+  color: #0da4e8;
+}
+

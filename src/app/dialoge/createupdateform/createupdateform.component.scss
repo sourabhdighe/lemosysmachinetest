@@ -1,0 +1,69 @@
+.add-emp-form {
+  font-family: var(--unnamed-font-family-poppins);
+  font-size: 12px;
+  height: auto !important;
+  // .add-emp-form-field {
+  // }
+
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .add-emp-form-field {
+      flex-wrap: wrap;
+    }
+  }
+
+  // .add-emp-field  {
+  // }
+
+  .add-emp-label {
+    padding-bottom: 10px;
+  }
+
+  ::ng-deep {
+    .mat-form-field-underline {
+      display: none !important;
+    }
+
+    .mat-dialog-content {
+      max-width: 100% !important;
+    }
+
+    .mat-form-field-flex {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 1px solid #dce4e8;
+      border-radius: 10px;
+      opacity: 1;
+      font-size: 12px;
+    }
+
+    .add-emp-field {
+      .mat-form-field-infix {
+        padding-left: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+.emp-list-btn {
+  background: rgb(30, 83, 196);
+  color: #ffffff;
+  border-radius: 10px;
+  opacity: 1;
+  font-size: 10px;
+}
+
+.btn-white {
+  border: 1px solid #0f0f0f;
+  border-radius: 10px;
+  background: transparent !important;
+  opacity: 0.3;
+  color: #0f0f0f;
+  font-size: 10px;
+}
+
+.cancledialoge {
+  position: relative;
+  cursor: pointer;
+  float: right;
+  top: -3em;
+  color: rgb(185, 182, 182);
+}
